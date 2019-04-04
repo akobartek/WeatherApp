@@ -1,1 +1,1 @@
-WeatherApp
+Hello to WeatherApp! :)
