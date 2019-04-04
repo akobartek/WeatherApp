@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Weather } from 'src/models/weather';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +10,10 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'weather-app';
-  // httpOptions = {
-  //   headers: new HttpHeaders({
-  //     'Content-Type': 'application/json'
-  //   })
-  // }
   constructor(private http: HttpClient) { }
 
   currentLocation: Coordinates;
-  weather: any = 'Poland';
+  weather: Weather = new Weather();
   url: string = 'http://api.openweathermap.org/data/2.5/weather';
 
 
@@ -25,25 +21,21 @@ export class AppComponent {
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
         (position) => {
-          // "this" here in the weather service is seen however currentLocation is always ""
           this.currentLocation = position.coords;
           console.log(this.currentLocation);
           this.getWeather();
-          //callback(position.coords);
         },
         (failure) => {
-          if (failure.message.indexOf("Only secure origins are allowed") == 0) {
-            alert('Only secure origins are allowed by your browser.');
-          }
+          console.log(failure);
         }
       );
     }
 
   }
   getWeather() {
-    this.weather = 'Wroclaw';
+    this.weather = new Weather();
     const params = new HttpParams()
-      .append('lat', '' + this.currentLocation.latitude)
+      .append('lat', this.currentLocation.latitude.toString())
       .append('lon', '' + this.currentLocation.longitude)
       .append('appid', 'dd4f5208462a65c91cde34a69c850673');
     this.http.get<string>(this.url, {
@@ -51,10 +43,16 @@ export class AppComponent {
     }
     ).subscribe((result: any) => {
       console.log(result)
+      this.weather.city = result.name;
+      this.weather.pressure = result.main.pressure;
+      this.weather.sunrise = result.sys.sunrise;
+      this.weather.temperature = result.main.temp;
+      this.weather.temperatureMax = result.main.temp_max;
+      this.weather.temperatureMin = result.main.temp_min;
+      this.weather.visibility = result.visibility;
+      this.weather.wind = result.wind.speed;
+
     })
-    // .pipe(
-    //   retry(1),
-    //   catchError(this.handleError)
-    // )
   }
 }
+

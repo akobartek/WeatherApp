@@ -8,3 +8,18 @@ button {
   color: whitesmoke;
   font-size: 20px;
 }
+
+h1 {
+  color: #ff4000;
+  font-weight: waga;
+}
+
+p {
+  color: #ff4000;
+  font-size: 20px;
+  font-weight: waga;
+}
+
+span {
+  color: black;
+}

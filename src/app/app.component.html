@@ -1,5 +1,11 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <button (click)="getLocation()"><i class="fas fa-map-marker-alt"></i></button>
-<h1>Weather for next days is: {{ weather }}</h1>
-<!-- bindowanie -->
+<h1><span>Weather for:</span> {{weather.city}}</h1>
+<p>pressure {{weather.pressure}} hPa</p>
+<p>sunrise {{weather.sunrise}}</p>
+<p>temperature {{weather.temperature}}</p>
+<p>temperatureMax {{weather.temperatureMax}}</p>
+<p>temperatureMin {{weather.temperatureMin}}</p>
+<p>visibility {{weather.visibility}}</p>
+<p>wind {{weather.wind}} m/s</p>
