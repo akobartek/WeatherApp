@@ -46,6 +46,7 @@ export class AppComponent {
       this.weather.city = result.name;
       this.weather.pressure = result.main.pressure;
       this.weather.sunrise = result.sys.sunrise;
+      this.weather.sunset = result.sys.sunset;
       this.weather.temperature = result.main.temp;
       this.weather.temperatureMax = result.main.temp_max;
       this.weather.temperatureMin = result.main.temp_min;

@@ -7,7 +7,5 @@ export class Weather {
   public visibility: number;
   public wind: number;
   public sunrise: Date;
-
-
-
+  public sunset: Date;
 }
