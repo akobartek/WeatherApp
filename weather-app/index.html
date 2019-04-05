@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<link rel="stylesheet" href="weather-icons-master/css/weather-icons.min.css">
+	<!-- <link rel="stylesheet" href="styles/debug.css"> -->
+	<style>
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hero {
+			background: url(img/base-background.jpg) center / cover;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="hero is-fullheight">
+		<div class="hero-head">
+			<div class="columns is-mobile is-marginless has-background-white-ter has-text-weight-normal">
+				<!-- logo -->
+				<div class="column center">
+					<p class="is-size-5">
+						CodersCamp Team
+					</p>
+				</div>
+				<!-- wyszukiwarka -->
+				<div class="column center">
+					<form action="search" method="get">
+						<div class="field has-addons">
+							<div class="control">
+								<input class="input" name="q" type="text" placeholder="City or ZIP Code">
+							</div>
+							<div class="control">
+								<button type="submit" class="button is-primary">Search</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<section class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column">
+					<div class="box" style="background:rgba(255, 255, 255, 0.50)">
+						<div class="level-item">
+							<p class="is-size-2 ">
+								Wrocław
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-1">
+								<i class="wi wi-night-sleet"></i>
+								27 °C
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-4">
+								Sunny
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-6" style="margin-right: 7%;">
+								<i class="fas fa-cloud"></i>
+								90%
+							</p>
+							<p class="is-size-6" style="margin-right: 7%;">
+								<i class="wi wi-strong-wind"></i>
+								20km/h
+							</p>
+							<p class="is-size-6">
+								<i class="fas fa-tint"></i>
+								43%%
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column">
+					<div class="box" style="background:rgba(255, 255, 255, 0.50)">
+						<div class="level-item">
+							<p class="is-size-6">
+								Friday 04/05
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-3 ">
+								<i class="wi wi-lightning"></i>
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-4" style="margin-right: 10%">
+								24°C
+							</p>
+							<p class="is-size-9">
+								16°C
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box" style="background:rgba(255, 255, 255, 0.50)">
+						<div class="level-item">
+							<p class="is-size-6">
+								Friday 04/05
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-3 ">
+								<i class="wi wi-night-showers"></i>
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-4" style="margin-right: 10%">
+								24°C
+							</p>
+							<p class="is-size-9">
+								16°C
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box" style="background:rgba(255, 255, 255, 0.50)">
+						<div class="level-item">
+							<p class="is-size-6">
+								Friday 04/05
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-3 ">
+								<i class="wi wi-night-cloudy"></i>
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-4" style="margin-right: 10%">
+								24°C
+							</p>
+							<p class="is-size-9">
+								16°C
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box" style="background:rgba(255, 255, 255, 0.50)">
+						<div class="level-item">
+							<p class="is-size-6">
+								Friday 04/05
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-3 ">
+								<i class="wi wi-lightning"></i>
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-4" style="margin-right: 10%">
+								24°C
+							</p>
+							<p class="is-size-9">
+								16°C
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box" style="background:rgba(255, 255, 255, 0.50)">
+						<div class="level-item">
+							<p class="is-size-6">
+								Friday 04/05
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-3 ">
+								<i class="wi wi-night-cloudy"></i>
+							</p>
+						</div>
+						<div class="level-item">
+							<p class="is-size-4" style="margin-right: 10%">
+								24°C
+							</p>
+							<p class="is-size-9">
+								16°C
+							</p>
+						</div>
+					</div>
+				</div>
+		</div>
+		</section>
+		</div>
+		<section class="section has-background-light">
+		<div class="container">
+			<div class="columns">
+					<div class="column">
+						 <figure class="image is-2"><img src="img/wro.jpg"></figure>
+					</div>
+					<div class="column">
+						 <figure class="image is-2"><img src="img/wro2.jpg"></figure>
+					</div>
+					<div class="column">
+						 <figure class="image is-2"><img src="img/wro3.jpeg"></figure>
+					</div>
+					<div class="column">
+						 <figure class="image is-2"><img src="img/wro.jpg"></figure>
+					</div>
+				</div>
+		</div>
+		</section>
+		<div class="hero-foot">
+			<div class="columns center is-mobile is-marginless has-background-white-ter heading has-text-weight-normal">
+				CodersCamp Project 2019
+			</div>
+		</div>
+	</div>
+</body>
