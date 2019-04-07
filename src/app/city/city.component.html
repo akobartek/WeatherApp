@@ -1,3 +1,31 @@
-<p>
-  city works!
-</p>
+           <div class="box" style="background:rgba(255, 255, 255, 0.50)">
+             <div class="level-item">
+               <p class="is-size-2 ">
+                 {{weather.city}}
+               </p>
+             </div>
+             <div class="level-item">
+               <p class="is-size-1">
+                 <i class="wi wi-night-sleet"></i>
+                 {{ceil(weather.temperature - 273.15)}} °C
+               </p>
+             </div>
+             <div class="level-item">
+               <p class="is-size-4">
+                 <img *ngFor="let image of weather.icons" src='{{image.url}}' title="{{image.description}}" />
+               </p>
+             </div>
+             <div class="level-item">
+               <p class="is-size-6" style="margin-right: 7%;">
+                 <i class="fas fa-cloud"></i>
+                 {{weather.visibility/100}} %
+               </p>
+               <p class="is-size-6" style="margin-right: 7%;">
+                 <i class="wi wi-strong-wind"></i>
+                 {{weather.wind}} m/s
+               </p>
+               <p class="is-size-6">
+                 <i class="fas fa-tint"></i>
+                 {{weather.humidity}} %
+               </p>
+             </div>

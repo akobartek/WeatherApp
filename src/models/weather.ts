@@ -9,4 +9,5 @@ export class Weather {
   public sunrise: Date;
   public sunset: Date;
   public humidity: number;
+  public icons: { description: string, url: string }[] = [];
 }

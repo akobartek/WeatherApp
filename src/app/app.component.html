@@ -14,7 +14,7 @@
               <input class="input" name="q" type="text" placeholder="City or ZIP Code">
             </div>
             <div class="control">
-              <button class="button is-primary" (click)="getLocation()">Search</button>
+              <button class="button is-primary">Search</button>
             </div>
           </div>
         </div>
@@ -24,38 +24,7 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-            <div class="box" style="background:rgba(255, 255, 255, 0.50)">
-              <div class="level-item">
-                <p class="is-size-2 ">
-                  {{weather.city}}
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-1">
-                  <i class="wi wi-night-sleet"></i>
-                  {{ceil(weather.temperature - 273.15)}} °C
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-4">
-                  Sunny
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-6" style="margin-right: 7%;">
-                  <i class="fas fa-cloud"></i>
-                  {{weather.visibility/100}} %
-                </p>
-                <p class="is-size-6" style="margin-right: 7%;">
-                  <i class="wi wi-strong-wind"></i>
-                  {{weather.wind}} m/s
-                </p>
-                <p class="is-size-6">
-                  <i class="fas fa-tint"></i>
-                  {{weather.humidity}} %
-                </p>
-              </div>
-            </div>
+            <app-city></app-city>
           </div>
         </div>
       </div>
@@ -64,114 +33,19 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-            <div class="box" style="background:rgba(255, 255, 255, 0.50)">
-              <div class="level-item">
-                <p class="is-size-6">
-                  Friday 04/05
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-3 ">
-                  <i class="wi wi-lightning"></i>
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-4" style="margin-right: 10%">
-                  24°C
-                </p>
-                <p class="is-size-9">
-                  16°C
-                </p>
-              </div>
-            </div>
+            <app-city city="Oslo"></app-city>
           </div>
           <div class="column">
-            <div class="box" style="background:rgba(255, 255, 255, 0.50)">
-              <div class="level-item">
-                <p class="is-size-6">
-                  Friday 04/05
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-3 ">
-                  <i class="wi wi-night-showers"></i>
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-4" style="margin-right: 10%">
-                  24°C
-                </p>
-                <p class="is-size-9">
-                  16°C
-                </p>
-              </div>
-            </div>
+            <app-city city="London"></app-city>
           </div>
           <div class="column">
-            <div class="box" style="background:rgba(255, 255, 255, 0.50)">
-              <div class="level-item">
-                <p class="is-size-6">
-                  Friday 04/05
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-3 ">
-                  <i class="wi wi-night-cloudy"></i>
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-4" style="margin-right: 10%">
-                  24°C
-                </p>
-                <p class="is-size-9">
-                  16°C
-                </p>
-              </div>
-            </div>
+            <app-city city="Tokyo"></app-city>
           </div>
           <div class="column">
-            <div class="box" style="background:rgba(255, 255, 255, 0.50)">
-              <div class="level-item">
-                <p class="is-size-6">
-                  Friday 04/05
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-3 ">
-                  <i class="wi wi-lightning"></i>
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-4" style="margin-right: 10%">
-                  24°C
-                </p>
-                <p class="is-size-9">
-                  16°C
-                </p>
-              </div>
-            </div>
+            <app-city city="New York"></app-city>
           </div>
           <div class="column">
-            <div class="box" style="background:rgba(255, 255, 255, 0.50)">
-              <div class="level-item">
-                <p class="is-size-6">
-                  Friday 04/05
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-3 ">
-                  <i class="wi wi-night-cloudy"></i>
-                </p>
-              </div>
-              <div class="level-item">
-                <p class="is-size-4" style="margin-right: 10%">
-                  24°C
-                </p>
-                <p class="is-size-9">
-                  16°C
-                </p>
-              </div>
-            </div>
+            <app-city city="Warsaw"></app-city>
           </div>
         </div>
       </div>
