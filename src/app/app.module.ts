@@ -4,10 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
+import { CityComponent } from './city/city.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CityComponent
   ],
   imports: [
     BrowserModule,

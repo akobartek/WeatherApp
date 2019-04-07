@@ -10,13 +10,17 @@ import { Weather } from 'src/models/weather';
 })
 export class AppComponent {
   title = 'weather-app';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getLocation();
+  }
 
   currentLocation: Coordinates;
   weather: Weather = new Weather();
   url: string = 'http://api.openweathermap.org/data/2.5/weather';
 
-
+  ceil(temp: number): number {
+    return Math.ceil(temp);
+  }
   public getLocation() {
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
@@ -52,7 +56,10 @@ export class AppComponent {
       this.weather.temperatureMin = result.main.temp_min;
       this.weather.visibility = result.visibility;
       this.weather.wind = result.wind.speed;
+      this.weather.humidity = result.main.humidity;
 
+    }, (error: any) => {
+      console.log(error);
     })
   }
 }

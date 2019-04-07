@@ -9,16 +9,14 @@
         </div>
         <!-- wyszukiwarka -->
         <div class="column center">
-          <form action="search" method="get">
-            <div class="field has-addons">
-              <div class="control">
-                <input class="input" name="q" type="text" placeholder="City or ZIP Code">
-              </div>
-              <div class="control">
-                <button type="submit" class="button is-primary">Search</button>
-              </div>
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" name="q" type="text" placeholder="City or ZIP Code">
             </div>
-          </form>
+            <div class="control">
+              <button class="button is-primary" (click)="getLocation()">Search</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -29,13 +27,13 @@
             <div class="box" style="background:rgba(255, 255, 255, 0.50)">
               <div class="level-item">
                 <p class="is-size-2 ">
-                  Wrocław
+                  {{weather.city}}
                 </p>
               </div>
               <div class="level-item">
                 <p class="is-size-1">
                   <i class="wi wi-night-sleet"></i>
-                  27 °C
+                  {{ceil(weather.temperature - 273.15)}} °C
                 </p>
               </div>
               <div class="level-item">
@@ -46,15 +44,15 @@
               <div class="level-item">
                 <p class="is-size-6" style="margin-right: 7%;">
                   <i class="fas fa-cloud"></i>
-                  90%
+                  {{weather.visibility/100}} %
                 </p>
                 <p class="is-size-6" style="margin-right: 7%;">
                   <i class="wi wi-strong-wind"></i>
-                  20km/h
+                  {{weather.wind}} m/s
                 </p>
                 <p class="is-size-6">
                   <i class="fas fa-tint"></i>
-                  43%%
+                  {{weather.humidity}} %
                 </p>
               </div>
             </div>

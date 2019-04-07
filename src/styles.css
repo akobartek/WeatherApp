@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background: url(./assets/img/base-background.jpg) center / cover;
+}

@@ -8,4 +8,5 @@ export class Weather {
   public wind: number;
   public sunrise: Date;
   public sunset: Date;
+  public humidity: number;
 }
