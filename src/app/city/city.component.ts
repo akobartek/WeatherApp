@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Weather } from 'src/models/weather';
@@ -12,7 +12,10 @@ export class CityComponent {
 
   @Input() city: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.city = changes.city.currentValue;
     if (this.city == null) {
       this.getLocation();
     } else {
@@ -82,5 +85,3 @@ export class CityComponent {
     })
   }
 }
-
-

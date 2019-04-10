@@ -10,6 +10,13 @@ import { Weather } from 'src/models/weather';
 })
 export class AppComponent {
   title = 'weather-app';
+  cityName: string = null
 
+  public setCity(city: string) {
+    if (city) {
+      this.cityName = city;
+    } else {
+      this.cityName = null;
+    }
+  }
 }
-

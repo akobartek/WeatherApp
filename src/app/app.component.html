@@ -1,76 +1,77 @@
-  <div class="hero is-fullheight">
-    <div class="hero-head">
-      <div class="columns is-mobile is-marginless has-background-white-ter has-text-weight-normal">
-        <!-- logo -->
-        <div class="column center">
-          <p class="is-size-5">
-            CodersCamp Team
-          </p>
-        </div>
-        <!-- wyszukiwarka -->
-        <div class="column center">
-          <div class="field has-addons">
-            <div class="control">
-              <input class="input" name="q" type="text" placeholder="City or ZIP Code">
-            </div>
-            <div class="control">
-              <button class="button is-primary">Search</button>
-            </div>
+<div class="hero is-fullheight">
+  <div class="hero-head">
+    <div class="columns is-mobile is-marginless has-background-white-ter has-text-weight-normal">
+      <!-- logo -->
+      <div class="column center">
+        <p class="is-size-5">
+          CodersCamp Team
+        </p>
+      </div>
+      <!-- wyszukiwarka -->
+      <div class="column center">
+        <div class="field has-addons">
+          <div class="control">
+            <input #cityInput (keyup.enter)="setCity(cityInput.value)" class="input" name="q" type="text"
+              placeholder="City or ZIP Code">
+          </div>
+          <div class="control">
+            <button (click)="setCity(cityInput.value)" class="button is-primary">Search</button>
           </div>
         </div>
       </div>
     </div>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <app-city></app-city>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <app-city city="Oslo"></app-city>
-          </div>
-          <div class="column">
-            <app-city city="London"></app-city>
-          </div>
-          <div class="column">
-            <app-city city="Tokyo"></app-city>
-          </div>
-          <div class="column">
-            <app-city city="New York"></app-city>
-          </div>
-          <div class="column">
-            <app-city city="Warsaw"></app-city>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
-  <section class="section has-background-light">
+  <section class="section">
     <div class="container">
       <div class="columns">
         <div class="column">
-          <figure class="image is-2"><img src="./../assets/img/wro.jpg"></figure>
-        </div>
-        <div class="column">
-          <figure class="image is-2"><img src="./../assets/img/wro2.jpg"></figure>
-        </div>
-        <div class="column">
-          <figure class="image is-2"><img src="./../assets/img/wro3.jpeg"></figure>
-        </div>
-        <div class="column">
-          <figure class="image is-2"><img src="./../assets/img/wro.jpg"></figure>
+          <app-city [city]="cityName"></app-city>
         </div>
       </div>
     </div>
   </section>
-  <div class="hero-foot">
-    <div class="columns center is-mobile is-marginless has-background-white-ter heading has-text-weight-normal">
-      CodersCamp Project 2019
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <app-city city="Oslo"></app-city>
+        </div>
+        <div class="column">
+          <app-city city="London"></app-city>
+        </div>
+        <div class="column">
+          <app-city city="Tokyo"></app-city>
+        </div>
+        <div class="column">
+          <app-city city="Rome"></app-city>
+        </div>
+        <div class="column">
+          <app-city city="Warsaw"></app-city>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-2"><img src="./../assets/img/wro.jpg"></figure>
+      </div>
+      <div class="column">
+        <figure class="image is-2"><img src="./../assets/img/wro2.jpg"></figure>
+      </div>
+      <div class="column">
+        <figure class="image is-2"><img src="./../assets/img/wro3.jpeg"></figure>
+      </div>
+      <div class="column">
+        <figure class="image is-2"><img src="./../assets/img/wro.jpg"></figure>
+      </div>
     </div>
   </div>
+</section>
+<div class="hero-foot">
+  <div class="columns center is-mobile is-marginless has-background-white-ter heading has-text-weight-normal">
+    CodersCamp Project 2019
+  </div>
+</div>
