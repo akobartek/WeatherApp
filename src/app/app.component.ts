@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Weather } from 'src/models/weather';
@@ -11,6 +11,7 @@ import { Weather } from 'src/models/weather';
 export class AppComponent {
   title = 'weather-app';
   cityName: string = null
+  @ViewChild('parentView') parentView: ElementRef;
 
   public setCity(city: string) {
     if (city) {

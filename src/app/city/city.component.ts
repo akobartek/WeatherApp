@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Input, SimpleChanges, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Weather } from 'src/models/weather';
@@ -11,6 +11,7 @@ import { Weather } from 'src/models/weather';
 export class CityComponent {
 
   @Input() city: string;
+  @Input() parentView: HTMLDivElement;
 
   constructor(private http: HttpClient) { }
 
@@ -79,7 +80,23 @@ export class CityComponent {
           description: element.description, url: `http://openweathermap.org/img/w/${element.icon}.png`
         })
       });
-
+      if (this.parentView) {
+        // switch (this.weather.icons[0].description) {
+        //   case 'light intensity drizzle': {
+        //     this.parentView.style.background = `url(./assets/img/shower-rain.jpg)`;
+        //     break;
+        //   }
+        //   case 'broken clouds': {
+        //     this.parentView.style.background = `url(./assets/img/scaterred-clouds.jpg)`;
+        //     break;
+        //   }
+        //   default: {
+        //     const description = this.weather.icons[0].description.replace(' ', '');
+        //     this.parentView.style.background = `url(./assets/img/${description}.jpg)`;
+        //     break;
+        //   }
+        // }
+      }
     }, (error: any) => {
       console.log(error);
     })

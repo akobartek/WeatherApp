@@ -1,4 +1,4 @@
-<div class="hero is-fullheight">
+<div #parentView class="hero is-fullheight">
   <div class="hero-head">
     <div class="columns is-mobile is-marginless has-background-white-ter has-text-weight-normal">
       <!-- logo -->
@@ -25,7 +25,7 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <app-city [city]="cityName"></app-city>
+          <app-city [city]="cityName" [parentView]="parentView"></app-city>
         </div>
       </div>
     </div>
