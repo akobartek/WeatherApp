@@ -81,21 +81,25 @@ export class CityComponent {
         })
       });
       if (this.parentView) {
-        // switch (this.weather.icons[0].description) {
-        //   case 'light intensity drizzle': {
-        //     this.parentView.style.background = `url(./assets/img/showerrain.jpg)`;
-        //     break;
-        //   }
-        //   case 'broken clouds': {
-        //     this.parentView.style.background = `url(./assets/img/scaterredclouds.jpg)`;
-        //     break;
-        //   }
-        //   default: {
-        //     const description = this.weather.icons[0].description.replace(' ', '');
-        //     this.parentView.style.background = `url(./assets/img/${description}.jpg)`;
-        //     break;
-        //   }
-        // }
+        switch (this.weather.icons[0].description) {
+          case 'light intensity drizzle': {
+            this.parentView.style.background = `url(./assets/img/showerrain.jpg) center`;
+            break;
+          }
+          case 'broken clouds': {
+            this.parentView.style.background = `url(./assets/img/scatteredclouds.jpg) center`;
+            break;
+          }
+          case 'overcast clouds': {
+            this.parentView.style.background = `url(./assets/img/scatteredclouds.jpg) center`;
+            break;
+          }
+          default: {
+            const description = this.weather.icons[0].description.replace(' ', '');
+            this.parentView.style.background = `url(./assets/img/${description}.jpg) center`;
+            break;
+          }
+        }
       }
     }, (error: any) => {
       console.log(error);

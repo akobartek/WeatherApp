@@ -23,7 +23,7 @@
   </div>
   <section class="section">
     <div class="container">
-      <div class="columns">
+      <div class="columns grow">
         <div class="column">
           <app-city [city]="cityName" [parentView]="parentView"></app-city>
         </div>
@@ -33,20 +33,20 @@
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column">
-          <app-city city="Oslo"></app-city>
+        <div class="column grow">
+          <app-city city="Oslo" (click)="setCity('Oslo')"></app-city>
         </div>
-        <div class="column">
-          <app-city city="London"></app-city>
+        <div class="column grow">
+          <app-city city="London" (click)="setCity('London')"></app-city>
         </div>
-        <div class="column">
-          <app-city city="Tokyo"></app-city>
+        <div class="column grow">
+          <app-city city="Tokyo" (click)="setCity('Tokyo')"></app-city>
         </div>
-        <div class="column">
-          <app-city city="Rome"></app-city>
+        <div class="column grow">
+          <app-city city="Rome" (click)="setCity('Rome')"></app-city>
         </div>
-        <div class="column">
-          <app-city city="Warsaw"></app-city>
+        <div class="column grow">
+          <app-city city="Warsaw" (click)="setCity('Warsaw')"></app-city>
         </div>
       </div>
     </div>
