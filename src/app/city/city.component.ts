@@ -83,11 +83,11 @@ export class CityComponent {
       if (this.parentView) {
         // switch (this.weather.icons[0].description) {
         //   case 'light intensity drizzle': {
-        //     this.parentView.style.background = `url(./assets/img/shower-rain.jpg)`;
+        //     this.parentView.style.background = `url(./assets/img/showerrain.jpg)`;
         //     break;
         //   }
         //   case 'broken clouds': {
-        //     this.parentView.style.background = `url(./assets/img/scaterred-clouds.jpg)`;
+        //     this.parentView.style.background = `url(./assets/img/scaterredclouds.jpg)`;
         //     break;
         //   }
         //   default: {
